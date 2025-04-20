@@ -28,7 +28,7 @@ export const Cards = ({ reset, selecioneTipo } : CardProps) => {
       const data = await getPokemonList(offset)
       setPokemonList((prevList) => [...prevList, ...data.results])
       setOffset((prevOffset) => prevOffset + data.results.length)
-      setHasMore(data.next !== null && offset + data.results.length < 1015) // Condição correta para parar no limite
+      setHasMore(data.next !== null && offset + data.results.length < 1025) // Condição correta para parar no limite
     } catch (error) {
       console.error("Error fetching Pokemon list:", error)
     } finally {
